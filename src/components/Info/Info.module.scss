@@ -1,0 +1,58 @@
+@import '../../css/config';
+
+.info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+
+  img {
+    width: 200px;
+  }
+
+  p {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $color-black;
+    text-align: center;
+  }
+
+  .backBtn {
+    position: relative;
+    height: 40px;
+    width: 100%;
+    background-color: $color-purple;
+    color: $color-grey;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 10px;
+    transition: background-color $transition-hover;
+
+    &:hover {
+      background-color: lighten($color-purple, 20%);
+    }
+
+    &:hover span {
+      transform: translateX(-50%);
+    }
+
+    span {
+      position: absolute;
+      top: 12px;
+      left: 20px;
+      fill: $color-grey;
+      transition: transform $transition-hover;
+
+      svg {
+        transform: rotate(180deg);
+      }
+    }
+  }
+}

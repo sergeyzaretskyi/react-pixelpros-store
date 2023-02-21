@@ -1,0 +1,107 @@
+@import '../../css/config';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 110px;
+  background-color: $color-purple;
+  padding: $padding-in-container;
+
+  .headerLeft {
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+    max-width: 300px;
+    transition: opacity $transition-hover;
+
+    svg {
+      fill: $color-grey;
+    }
+
+    .logoText {
+      p {
+        text-transform: uppercase;
+        color: $color-grey;
+        font-weight: 800;
+      }
+
+      span {
+        font-size: 0.9rem;
+        color: $color-grey;
+        font-weight: 500;
+      }
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  .headerRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+
+    svg {
+      fill: $color-grey;
+      cursor: pointer;
+      transition: fill $transition-hover;
+
+      &:hover {
+        fill: $color-lightblue;
+      }
+    }
+
+    .cart {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+    }
+  }
+}
+
+@media (max-width: 550px) {
+  .header {
+    height: 130px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logoText {
+    p {
+      font-size: 0.9rem;
+    }
+
+    span {
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .header {
+    height: 130px;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .headerLeft {
+    svg {
+      display: none;
+    }
+  }
+
+  .logoText {
+    p {
+      font-size: 0.9rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+@import '../../css/config';
+
+.orders {
+  padding: $padding-in-container;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+
+  .separator {
+    height: 2px;
+    border-bottom: 2px dashed $color-grey;
+    margin: 15px 0;
+  }
+
+  .grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .empty {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      height: 100%;
+
+      a {
+        width: 100%;
+      }
+
+      img {
+        width: 200px;
+        height: 100%;
+      }
+
+      p {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: $color-black;
+      }
+
+      button {
+        position: relative;
+        height: 40px;
+        width: 100%;
+        background-color: $color-purple;
+        color: $color-grey;
+        font-weight: 600;
+        font-size: 1rem;
+        border-radius: 10px;
+        transition: background-color $transition-hover;
+
+        &:hover {
+          background-color: lighten($color-purple, 20%);
+        }
+
+        &:hover span {
+          transform: translateX(-50%);
+        }
+
+        span {
+          position: absolute;
+          top: 12px;
+          left: 20px;
+          fill: $color-grey;
+          transition: transform $transition-hover;
+
+          svg {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 370px) {
+  button {
+    span {
+      display: none;
+    }
+  }
+}
