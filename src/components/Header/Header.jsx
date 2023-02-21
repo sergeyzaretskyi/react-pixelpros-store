@@ -39,7 +39,7 @@ export const Header = ({ toggleDrawer, isOpen }) => {
             </svg>
           </li>
 
-          <Link to="favorites">
+          <Link to="/favorites">
             <li className={styles.favorites}>
               <svg
                 width={24}
@@ -52,7 +52,7 @@ export const Header = ({ toggleDrawer, isOpen }) => {
             </li>
           </Link>
 
-          <Link to="orders">
+          <Link to="/orders">
             <li className={styles.user}>
               <svg
                 width={24}

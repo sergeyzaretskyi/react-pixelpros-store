@@ -142,8 +142,8 @@ export const App = () => {
         <main>
           <Routes>
             <Route path="/" element={<Home {...homeProps} />} />
-            <Route path="favorites" element={<Favorites />} />
-            <Route path="orders" element={<Orders />} />
+            <Route path="/favorites" element={<Favorites />} />
+            <Route path="/orders" element={<Orders />} />
           </Routes>
         </main>
       </div>
